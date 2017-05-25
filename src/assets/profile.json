@@ -1,0 +1,61 @@
+{
+  "experience" : [
+    {
+      "company" : "BizFlow",
+      "period" : "2015-2017",
+      "position" : "Web Developer",
+      "jobdesc" : [
+        "Developed front-end and designed UI for new features of BizFlow web solution using Adobe Suites, JavaScript, jQuery, Kendo UI, Angular JS, LESS, SASS on Java based system in BizFlow R&D team.",
+        "Performed cross-platform and cross-browser testing of website content. ",
+        "Participated in a project for the TriWest in Phoenix, Arizona and set up a server environment for the BizFlow system on more than 50 servers and applied the STIG (Security Technical Implementation Guide) standard.",
+        "Participated in a project for the Monitoring BizFlow Plugin development and setup and tested on system monitoring solutions AppDynamics and Nagios XI."
+      ]
+    },
+    {
+      "company" : "Cooper River",
+      "period" : "2014",
+      "position" : "Web Designer",
+      "jobdesc" : [
+        "DoD Contractor of US Army ITD(Information Technology Division) in Fort Belvoir, Virginia. ",
+        "Created wireframe, website/UI designs and graphic resources for US Army legal service website JAGCNET."
+      ]
+    },
+    {
+      "company" : "Armature",
+      "period" : "2013-2014",
+      "position" : "Front End Developer",
+      "jobdesc" : [
+        "Developed front-end and designed UI for new features of BizFlow web solution using Adobe Suites, JavaScript, jQuery, Kendo UI, Angular JS, LESS, SASS on Java based system in BizFlow R&D team.",
+        "Performed cross-platform and cross-browser testing of website content. ",
+        "Participated in a project for the TriWest in Phoenix, Arizona and set up a server environment for the BizFlow system on more than 50 servers and applied the STIG (Security Technical Implementation Guide) standard.",
+        "Participated in a project for the Monitoring BizFlow Plugin development and setup and tested on system monitoring solutions AppDynamics and Nagios XI."
+      ]
+    },
+    {
+      "company" : "Freelancer",
+      "period" : "2010-2012",
+      "position" : "Web Developer & Web Designer",
+      "jobdesc" : [
+        "Developed front-end and designed UI for new features of BizFlow web solution using Adobe Suites, JavaScript, jQuery, Kendo UI, Angular JS, LESS, SASS on Java based system in BizFlow R&D team.",
+        "Performed cross-platform and cross-browser testing of website content. ",
+        "Participated in a project for the TriWest in Phoenix, Arizona and set up a server environment for the BizFlow system on more than 50 servers and applied the STIG (Security Technical Implementation Guide) standard.",
+        "Participated in a project for the Monitoring BizFlow Plugin development and setup and tested on system monitoring solutions AppDynamics and Nagios XI."
+      ]
+    }
+  ],
+  "webSkillSet" : [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "jQuery",
+    "TypeScript",
+    "Bootstrap",
+    "Kendo UI",
+    "Angular JS",
+    "React JS",
+    "Node JS",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe InDesign"
+  ]
+}

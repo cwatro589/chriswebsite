@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chriswebsite</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="./assets/particles.min.js"></script>
+  <script src="./assets/app.js"></script>
+  <script>
+    $(document).on("click", "a[href*='#']:not([href='#'])", function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 700);
+            return false;
+        }
+      }
+    });
+    jQuery(document).ready(function(jQuery) {
+      // var scrollMenu = [];
+      // $('.section').each(function(i, e) {
+      //   var value = this.offsetTop;
+      //   scrollMenu.push({
+      //      id : i,
+      //      top : value
+      //   });
+      // });
+      // $(window).scroll(function(i) {
+      //   if ($(this).scrollTop() == )
+      // })
+      var topMenu = jQuery(".nav"),
+      offset = 40,
+      topMenuHeight = topMenu.outerHeight()+offset,
+      // All list items
+      menuItems =  topMenu.find('a[href*="#"]'),
+      // Anchors corresponding to menu items
+      scrollItems = menuItems.map(function(){
+        var href = jQuery(this).attr("href"),
+        id = href.substring(href.indexOf('#')),
+        item = jQuery(id);
+        //console.log(item)
+        if (item.length) { return item; }
+      });
+
+      // so we can get a fancy scroll animation
+      menuItems.click(function(e){
+        var href = jQuery(this).attr("href"),
+          id = href.substring(href.indexOf('#'));
+            offsetTop = href === "#" ? 0 : jQuery(id).offset().top-topMenuHeight+1;
+        jQuery('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 300);
+        e.preventDefault();
+      });
+
+      // Bind to scroll
+      jQuery(window).scroll(function(){
+         // Get container scroll position
+         var fromTop = jQuery(this).scrollTop()+topMenuHeight;
+
+         // Get id of current scroll item
+         var cur = scrollItems.map(function(){
+           if (jQuery(this).offset().top < fromTop)
+             return this;
+         });
+
+         // Get the id of the current element
+         cur = cur[cur.length-1];
+         var id = cur && cur.length ? cur[0].id : "";
+
+         menuItems.parent().removeClass("active");
+         if(id){
+              menuItems.parent().end().filter("[href*='#"+id+"']").parent().addClass("active");
+              if(id == 'main') {
+                $('header').removeClass('scrolled');
+              }
+              else {
+                $('header').addClass('scrolled');
+              }
+         }
+      })
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <strong>CHRIS</strong>JANG
+        <span>Front End Developer & Web/UI Designer</span>
+    </div>
+      <ul class="nav">
+          <li class="active">
+            <a href="#main">Main</a>
+          </li>
+          <li>
+            <a href="#resume">Profile</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#sampleCode">Sample Code</a>
+          </li>
+          <li>
+            <a href="#">Contact Me</a>
+          </li>
+      </ul>
+  </header>
+  <app-root id="main" class="section">Loading...</app-root>
+  <resume-section id="resume" class="section area"></resume-section>
+  <portfolio-section id="portfolio" class="section area"></portfolio-section>
+  <sampleCodes-section id="sampleCode" class="section area"></sampleCodes-section>
+</body>
+</html>

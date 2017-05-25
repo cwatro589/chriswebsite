@@ -1,0 +1,22 @@
+<section>
+  <div class="sectionContainer">
+    <div class="sectionTitle">
+      <h1>Portfolio</h1>
+    </div>
+    <div class="yearSelector">
+        <ul class="horizontal">
+            <li (click)="toggleHighlight(99); yearSelected = 'all';" [ngClass]="{'selected': highlightedDiv === 99}">All</li>
+            <!-- <li *ngFor="let year of portfolioImages | filterUnique" (click)="yearSelected = year.year">{{year.year}}</li> -->
+            <li *ngFor="let year of portfolioImages | filterUnique, let i = index" (click)="toggleHighlight(i); yearSelected = year.year;" [ngClass]="{'selected': highlightedDiv === i}">{{year.year}}</li>
+        </ul>
+    </div>
+    <ul class="portfolioList horizontal">
+      <li *ngFor="let item of portfolioImages | filterForPortfolio:yearSelected" [ngStyle]="{'background-image':'url(' + item.imageFile + ')'}">
+        <div>
+          {{item.title}}
+          {{item.year}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

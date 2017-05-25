@@ -1,0 +1,114 @@
+<section class="greybg">
+    <div class="sectionContainer">
+      <div class="sectionTitle">
+        <h1>About me</h1>
+      </div>
+      <div class="myInfo">
+        <div class="left">
+        </div>
+        <div class="right">
+          <div>
+            I am a front-end developer and web designer located in Virginia, United States. I have over a 15 years of professional experience in developing and designing small to large-scale websites and web-applications based on webstandard technologies like HTML5, CSS, JavaScript, jQuery, Angular 2, React JS.
+          </div>
+          <div class="skillContainer">
+            <h3>Web Skills</h3>
+            <ul class="skillList">
+              <li *ngFor='let skill of experienceList.webSkillSet'>{{skill}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section>
+  <div class="sectionContainer">
+    <div class="sectionTitle">
+      <h1>What I do</h1>
+    </div>
+    <ul class="whatIdoList">
+      <li>
+        <div class="containter">
+          <div class="posIcon">
+            <i class="fa fa-code"></i>
+          </div>
+          <h3 class="posTitle">
+            Front End Development
+          </h3>
+          <div class="posDesc">
+            Blah Blah Blah
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="containter">
+          <div class="posIcon">
+            <i class="fa fa-laptop"></i>
+          </div>
+          <h3 class="posTitle">
+            Web Design
+          </h3>
+          <div class="posDesc">
+            Blah Blah Blah
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="containter">
+          <div class="posIcon">
+            <i class="fa fa-object-group"></i>
+          </div>
+          <h3 class="posTitle">
+            UI Design
+          </h3>
+          <div class="posDesc">
+            Blah Blah Blah
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="containter">
+          <div class="posIcon">
+            <i class="fa fa-newspaper-o"></i>
+          </div>
+          <h3 class="posTitle">
+            Graphic Design
+          </h3>
+          <div class="posDesc">
+            Blah Blah Blah
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="greybg">
+  <div class="sectionContainer">
+    <div class="sectionTitle">
+      <h1>Experience</h1>
+    </div>
+    <ul class="experienceList">
+        <li *ngFor='let job of experienceList.experience'>
+            <div class="leftSide">
+              <div class="companyName">
+                  {{job.company}}
+              </div>
+              <div class="period">
+                  {{job.period}}
+              </div>
+            </div>
+            <div class="rightSide">
+              <div class="positionTitle">
+                  {{job.position}}
+              </div>
+              <div class="jobDetail">
+                  <ul>
+                      <li *ngFor='let text of job.jobdesc'>
+                          {{text}}
+                      </li>
+                  </ul>
+              </div>
+            </div>
+        </li>
+    </ul>
+  </div>
+</section>
